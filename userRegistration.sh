@@ -19,3 +19,12 @@ then
 else
 	echo "Invaild"
 fi
+echo "Enter user Email"
+read mail
+pat="^[a-z]{3,}(|[.]?[0-9a-zA-Z]+)([@])([a-z0-9]+)([.|+|_][a-z]{2,4})(|[.][a-zA-Z]{2})$"
+if [[ $mail =~ $pat ]]
+then
+	echo "Vaild"
+else
+	echo "Invaild"
+fi
