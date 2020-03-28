@@ -10,3 +10,12 @@ then
 else
 	echo "Invaild"
 fi
+echo "Enter user LastName"
+read lname
+lastName=(^[A-Z][a-z]{3,})$
+if [[ $lname =~ $lastName ]]
+then
+	echo "Vaild"
+else
+	echo "Invaild"
+fi
