@@ -50,3 +50,16 @@ then
 else
 	echo "Invaild"
 fi
+
+#Password rule to check upper case
+LC_ALL=cs_CZ.UTF-8
+echo "Enter PassWord [Minimum 8 characters]"
+read passWord
+pat=([a-zA-Z]{8,})$
+pat1=^[A-Z]
+if [[ $passWord =~ $pat1$pat ]]
+then
+	echo "Vaild password"
+else
+	echo "Invaild starting letter must be UpperCase"
+fi
