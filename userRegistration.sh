@@ -40,3 +40,13 @@ then
 else
 	echo "Invaild"
 fi
+
+echo "Enter PassWord [Minimum 8 characters]"
+read passWord
+pat=([a-zA-Z]{8})$
+if [[ $passWord =~ $pat ]]
+then
+	echo "Vaild"
+else
+	echo "Invaild"
+fi
