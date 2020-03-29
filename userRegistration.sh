@@ -77,3 +77,17 @@ then
 else
 	echo "Invaild starting letter is UpperCase and one numeric number must be"
 fi
+
+#Password rule 4 to  check  one special character
+LC_ALL=cs_CZ.UTF-8
+echo "Enter PassWord [Minimum 8 characters]"
+read passWord
+pat=^[A-Z]+([a-zA-Z]{8,})
+pat1=([0-9])
+pat2=([@|#|$|!|*|&|.|+|_])
+if [[ $passWord =~ $pat$pat2$pat1 ]]
+then
+	echo "Vaild Password"
+else
+	echo "Invaild starting letter is UpperCase and one numeric number must be"
+fi
