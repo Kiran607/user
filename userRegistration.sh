@@ -63,3 +63,17 @@ then
 else
 	echo "Invaild starting letter must be UpperCase"
 fi
+
+#password rule 3 to check numeric character
+LC_ALL=cs_CZ.UTF-8
+echo "Enter PassWord [Minimum 8 characters]"
+read passWord
+pat=^[A-Z]
+pat1=([a-zA-Z0-9]{8,})
+pat2=(^[0-9])
+if [[ $passWord =~ $pat$pat1$pat2 ]]
+then
+	echo "Vaild"
+else
+	echo "Invaild starting letter is UpperCase and one numeric number must be"
+fi
